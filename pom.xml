@@ -13,6 +13,8 @@
   <packaging>war</packaging>  
   <name>crm Maven Webapp</name>  
   <url>http://maven.apache.org</url>  
+  
+  
   <dependencies> 
     <dependency> 
       <groupId>junit</groupId>  
@@ -104,6 +106,13 @@
 	</dependency>
 	<!-- Jackson -->
     
+    <!-- Freemarker -->
+	<dependency>
+		<groupId>org.freemarker</groupId>
+		<artifactId>freemarker</artifactId>
+		<version>${freemarker.version}</version>
+	</dependency>
+    
     
     <dependency>
 		<groupId>org.ajaxanywhere</groupId>
@@ -116,6 +125,8 @@
       <version>1.2</version> 
     </dependency> 
   </dependencies>  
+  
+  
   <build> 
     <finalName>crm</finalName> 
   </build> 
