@@ -6,12 +6,10 @@
     <#list ["winter", "spring", "summer", "autumn"] as x>
 		${x}
 	</#list>
-	${xml_escape}
 	<br />
-	<#assign x> 
-		<#list ["q", "w", "e", "r", "t", "y", "u"] as n>
-			${n} 
-		</#list> 
-	</#assign> 
+	
+	<!#-- 对变量进行赋值 -->
+	<#assign x="张三">
+	${x}
 </body>
 </html>
