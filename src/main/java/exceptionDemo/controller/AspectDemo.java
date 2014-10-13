@@ -12,14 +12,14 @@ public class AspectDemo {
 	
 	private static Logger logger = Logger.getLogger(AspectDemo.class);
 	
-	@Pointcut("execution(* *.*(..))")
+	@Pointcut("within(exceptionDemo.controller..*)")
 	public void pointcutName(){
 		
 	}
 	@AfterThrowing(pointcut="pointcutName()", throwing="e")
 	public void wirteLog(Exception e){
 		logger.debug("==================================");
-		logger.debug(e);
+		logger.error(e);
 	}
 	
 	@Before("pointcutName()")

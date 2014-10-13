@@ -137,6 +137,14 @@
 	</dependency>
     
     
+	<!-- cglib begin -->
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib-nodep</artifactId>
+		<version>3.1</version>
+	</dependency>
+	<!-- cglib end -->
+    
     <dependency>
 		<groupId>org.ajaxanywhere</groupId>
 		<artifactId>ajaxanywhere</artifactId>
