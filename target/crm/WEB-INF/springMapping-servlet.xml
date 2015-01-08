@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd" >  
+<beans>
+	<bean id="urlMapping" class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+		<!-- 配置拦截器 -->
+		<property name="interceptors">
+            <list>
+                <ref bean="myInter" />
+            </list>
+        </property>
+	</bean>
+	
+	<bean class="springFrameWork.springMapping.WelcomeController">
+	</bean>
+	<bean id="myInter" class="springFrameWork.springMapping.MyInter" />
+	
+	
+	<!-- ViewResolver -->  
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>  
+	    <property name="prefix" value="/WEB-INF/jsp/"/>  
+	    <property name="suffix" value=".jsp"/>  
+	</bean>
+</beans>

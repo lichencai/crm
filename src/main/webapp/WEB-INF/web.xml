@@ -8,15 +8,13 @@
   <display-name>Archetype Created Web Application</display-name> 
   
   
-  <context-param>
+   <context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath:spring/crm.xml
-		    classpath:spring/module.xml
+		    classpath:spring/common.xml
 		</param-value>
    </context-param>
-  
-  
   
     <!-- 配置spring的拦截器  -->
     <servlet>

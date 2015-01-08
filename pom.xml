@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">  
-  <modelVersion>4.0.0</modelVersion>  
+  <modelVersion>4.0.0</modelVersion> 
+   
   <parent> 
     <groupId>lcc</groupId>  
     <artifactId>ext</artifactId>  
     <version>0.0.1-SNAPSHOT</version> 
   </parent>  
+  
   <groupId>lcc</groupId>  
   <artifactId>crm</artifactId>  
   <version>0.0.1-SNAPSHOT</version>  
@@ -29,18 +31,17 @@
       <artifactId>javax.servlet-api</artifactId>  
       <version>3.1.0</version> 
     </dependency>  
-    <dependency> 
-      <groupId>javax.servlet.jsp</groupId>  
-      <artifactId>javax.servlet.jsp-api</artifactId>  
-      <version>2.3.2-b01</version> 
-    </dependency>  
-    
-    
+    <dependency>
+		<groupId>javax.servlet.jsp</groupId>
+		<artifactId>jsp-api</artifactId>
+		<version>2.1</version>
+		<scope>provided</scope>
+	</dependency> 
     <dependency> 
       <groupId>jstl</groupId>  
       <artifactId>jstl</artifactId>  
       <version>1.2</version> 
-    </dependency>  
+    </dependency> 
     
     
     <!-- spring begin -->  
@@ -89,13 +90,13 @@
       <groupId>org.springframework</groupId>  
       <artifactId>spring-aspects</artifactId>  
       <version>${spring.version}</version>  
-      <scope>compile</scope> 
+      <scope>compile</scope>
     </dependency>  
     <dependency> 
       <groupId>org.springframework.data</groupId>  
       <artifactId>spring-data-redis</artifactId>  
       <version>1.1.0.RELEASE</version> 
-    </dependency>  
+    </dependency>
     <!-- spring end -->  
     
     <!-- Jackson 实现通过将对象转换为json对象的方式-->
@@ -119,7 +120,6 @@
 		<version>${freemarker.version}</version>
 	</dependency>
 	<!-- Freemarker -->
-	
     
     <!-- jetty -->
     <dependency>
@@ -144,28 +144,22 @@
 		<version>3.1</version>
 	</dependency>
 	<!-- cglib end -->
-    
-    <dependency>
-		<groupId>org.ajaxanywhere</groupId>
-		<artifactId>ajaxanywhere</artifactId>
-		<version>1.2-rc2</version>
-	</dependency>
-    <dependency> 
-      <groupId>jstl</groupId>  
-      <artifactId>jstl</artifactId>  
-      <version>1.2</version> 
-    </dependency> 
-    
-    
+	
     <dependency> 
       <groupId>lcc</groupId>  
-      <artifactId>module</artifactId>  
-      <version>0.0.1-SNAPSHOT</version> 
-    </dependency> 
+      <artifactId>common</artifactId>
+  	  <version>0.0.1-SNAPSHOT</version>
+    </dependency>
     
     <dependency>
         <groupId>com.alibaba</groupId>
         <artifactId>dubbo</artifactId>
+        <exclusions>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring</artifactId>
+			</exclusion>
+		</exclusions>
         <version>2.5.3</version>
     </dependency>
 	<dependency>
