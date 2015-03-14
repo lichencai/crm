@@ -129,13 +129,13 @@
 	</dependency>
     <!-- jetty -->
     
-    <!-- log4j -->
+    <!-- log4j 使用hibernate时需要关闭这个log4j-->
     <dependency>
 	  <groupId>log4j</groupId>
 	  <artifactId>log4j</artifactId>
 	  <version>1.2.9</version>
 	</dependency>
-    
+    <!-- log4j -->
     
 	<!-- cglib begin -->
 	<dependency>
@@ -167,6 +167,32 @@
 	    <artifactId>zkclient</artifactId>
 	    <version>0.1</version>
 	</dependency>
+    
+    
+    <!-- hibernate -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${hibernate.version}</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.javassist</groupId>
+        <artifactId>javassist</artifactId>
+        <version>3.18.1-GA</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>1.6.1</version>
+    </dependency>
+    
+    <dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>5.1.21</version>
+    </dependency>
     
     
   </dependencies>  
