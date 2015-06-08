@@ -31,7 +31,8 @@
     <!-- 自动扫描的包名 -->  
     <context:component-scan base-package="work.controller" ></context:component-scan>  
     <context:component-scan base-package="work.lenovo.controller" ></context:component-scan>
-    <context:component-scan base-package="jquery.test20140711" ></context:component-scan>       
+    <context:component-scan base-package="jquery.test20140711" ></context:component-scan> 
+    <context:component-scan base-package="hibernate.**" ></context:component-scan>      
     <!-- 默认的注解映射的支持  -->
     <mvc:annotation-driven /> 
     

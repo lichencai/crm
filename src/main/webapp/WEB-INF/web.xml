@@ -7,20 +7,22 @@
 	 
   <display-name>Archetype Created Web Application</display-name> 
   
-  
-   <context-param>
+  	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			<!-- classpath:spring/crm.xml
-		    classpath:spring/common.xml
-		    classpath:exceptionDemo/applicationContext.xml -->
+			classpath:spring-mvc/applicationContext.xml
 		</param-value>
-   </context-param>
+	</context-param>
   
     <!-- 配置spring的拦截器  -->
     <servlet>
 		<servlet-name>spring-mvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<description>spring mvc 配置文件</description>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-mvc.xml</param-value>
+		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 
@@ -30,26 +32,20 @@
 	</servlet-mapping>
     <!-- 配置spring的拦截器  -->
     
-    
     <!--Spring ApplicationContext 载入 -->  
     <context-param>
 		<param-name>webAppRootKey</param-name>
 		<param-value>exceptionDemo.root</param-value>
 		
-		<!-- <param-name>contextConfigLocation</param-name>
-		<param-value>
-			classpath:exceptionDemo/applicationContext.xml
-		</param-value> -->
-		
-		<!-- <param-name>log4jConfigLocation</param-name>
+		<param-name>log4jConfigLocation</param-name>
 		<param-value>
 			classpath:exceptionDemo/log4j.properties
-		</param-value> -->
+		</param-value>
 	</context-param>
     
-    <!-- <listener>
+    <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-    </listener> -->
+    </listener>
 	<listener>  
 	    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>

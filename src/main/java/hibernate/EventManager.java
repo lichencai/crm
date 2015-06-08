@@ -5,16 +5,29 @@ import hibernate.util.HibernateUtil;
 
 import java.util.Date;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 
 public class EventManager {
+	
+	private static Logger logger = null;
+	
+	static {
+		System.setProperty("log4j.configuration", "exceptionDemo/log4j.properties");
+		logger = Logger.getLogger(EventManager.class);
+	}
+	
 	public static void main(String[] args) {
-        EventManager mgr = new EventManager();
+		
+		
+		logger.debug("fsdfds");
+		logger.error("adfsadsf");
+        /*EventManager mgr = new EventManager();
 
         
         mgr.createAndStoreEvent("My Event", new Date());
 
-        HibernateUtil.getSessionFactory().close();
+        HibernateUtil.getSessionFactory().close();*/
     }
 
     private void createAndStoreEvent(String title, Date theDate) {
